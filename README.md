@@ -61,6 +61,22 @@ decodelabs-portfolio/
 
 ---
 
+## Task 3 - Database Integration
+
+Implemented MongoDB database integration using Mongoose.
+
+Features:
+- Database connection setup
+- User schema design
+- CRUD operations with MongoDB
+- Persistent data storage
+
+Tech Stack:
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+
 ## 🚀 Deployment
 
 The project is deployed using GitHub Pages.
