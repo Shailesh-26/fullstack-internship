@@ -5,60 +5,85 @@ const userForm = document.getElementById("userForm");
 
 async function loadUsers() {
 
-    try {
 
-        const response = await fetch(apiURL);
-        const users = await response.json();
+try {
 
-        userList.innerHTML = "";
+    const response = await fetch(apiURL);
+    const users = await response.json();
 
-        users.forEach(user => {
+    userList.innerHTML = "";
 
-            const li = document.createElement("li");
-            li.textContent = `${user.name} - ${user.email}`;
+    users.forEach(user => {
 
-            userList.appendChild(li);
+        const li = document.createElement("li");
 
-        });
+        const userText = document.createElement("span");
+        userText.textContent = `${user.name} - ${user.email}`;
 
-    } catch (error) {
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.classList.add("btn");
 
-        console.error("Error loading users:", error);
+        deleteBtn.onclick = async () => {
 
-    }
+            await fetch(`${apiURL}/${user._id}`, {
+                method: "DELETE"
+            });
+
+            loadUsers();
+        };
+
+        li.appendChild(userText);
+        li.appendChild(deleteBtn);
+
+        li.style.display = "flex";
+        li.style.justifyContent = "space-between";
+        li.style.alignItems = "center";
+
+        userList.appendChild(li);
+
+    });
+
+} catch (error) {
+
+    console.error("Error loading users:", error);
+
+}
+
 
 }
 
 userForm.addEventListener("submit", async (e) => {
 
-    e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+e.preventDefault();
 
-    try {
+const name = document.getElementById("name").value;
+const email = document.getElementById("email").value;
 
-        await fetch(apiURL, {
+try {
 
-            method: "POST",
+    await fetch(apiURL, {
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+        method: "POST",
 
-            body: JSON.stringify({ name, email })
+        headers: {
+            "Content-Type": "application/json"
+        },
 
-        });
+        body: JSON.stringify({ name, email })
 
-        userForm.reset();
+    });
 
-        loadUsers();
+    userForm.reset();
+    loadUsers();
 
-    } catch (error) {
+} catch (error) {
 
-        console.error("Error adding user:", error);
+    console.error("Error adding user:", error);
 
-    }
+}
+
 
 });
 
