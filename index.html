@@ -1,88 +1,108 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Shailesh | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shailesh | Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header class="header">
-    <div class="container nav-container">
-        <h1 class="logo">Shailesh</h1>
+<div class="container nav-container">
+<h1 class="logo">Shailesh</h1>
 
-        <button class="menu-toggle" id="menu-toggle">☰</button>
+<button class="menu-toggle" id="menu-toggle">☰</button>
 
-        <nav class="nav" id="nav">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<nav class="nav" id="nav">
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#users">Users</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
 </header>
 
 <main>
 
 <section class="hero">
-    <div class="container hero-content">
-        <h2>Frontend Developer</h2>
-        <p>Building clean, scalable and responsive web interfaces.</p>
-        <a href="#projects" class="btn">Explore My Work</a>
-    </div>
+<div class="container hero-content">
+<h2>Frontend Developer</h2>
+<p>Building clean, scalable and responsive web interfaces.</p>
+<a href="#projects" class="btn">Explore My Work</a>
+</div>
 </section>
 
 <section id="about" class="about section">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-text">
-            I am a Computer Science student focused on crafting modern,
-            accessible, and responsive web applications using HTML,
-            CSS, and JavaScript.
-        </p>
-    </div>
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<p class="section-text">
+I am a Computer Science student focused on crafting modern,
+accessible, and responsive web applications using HTML,
+CSS, and JavaScript.
+</p>
+</div>
 </section>
 
 <section id="projects" class="projects section">
-    <div class="container">
-        <h2 class="section-title">Projects</h2>
+<div class="container">
+<h2 class="section-title">Projects</h2>
 
-        <div class="project-grid">
-            <article class="card">
-                <h3>Responsive Landing Page</h3>
-                <p>Mobile-first layout using Grid & Flexbox.</p>
-            </article>
+<div class="project-grid">
+<article class="card">
+<h3>Responsive Landing Page</h3>
+<p>Mobile-first layout using Grid & Flexbox.</p>
+</article>
 
-            <article class="card">
-                <h3>Interactive UI Components</h3>
-                <p>JavaScript-based menu and interactions.</p>
-            </article>
+<article class="card">
+<h3>Interactive UI Components</h3>
+<p>JavaScript-based menu and interactions.</p>
+</article>
 
-            <article class="card">
-                <h3>Semantic Web Structure</h3>
-                <p>Accessible and SEO-friendly HTML architecture.</p>
-            </article>
-        </div>
-    </div>
+<article class="card">
+<h3>Semantic Web Structure</h3>
+<p>Accessible and SEO-friendly HTML architecture.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="users" class="section">
+<div class="container">
+
+<h2 class="section-title">User Database</h2>
+
+<form id="userForm">
+<input type="text" id="name" placeholder="Enter name" required>
+<input type="email" id="email" placeholder="Enter email" required>
+<button type="submit" class="btn">Add User</button>
+</form>
+
+<ul id="userList"></ul>
+
+</div>
 </section>
 
 <section id="contact" class="contact section">
-    <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p>Email: shaileshsulakay@gmail.com</p>
-    </div>
+<div class="container">
+<h2 class="section-title">Contact</h2>
+<p>Email: shailesh@example.com</p>
+</div>
 </section>
 
 </main>
 
 <footer class="footer">
-    <div class="container">
-        <p>© 2026 Shailesh. All rights reserved.</p>
-    </div>
+<div class="container">
+<p>© 2026 Shailesh. All rights reserved.</p>
+</div>
 </footer>
 
 <script src="js/script.js"></script>
+
 </body>
 </html>
